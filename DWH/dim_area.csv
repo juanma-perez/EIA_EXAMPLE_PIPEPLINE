@@ -1,0 +1,53 @@
+﻿ID;DUO_AREA;STATE_CODE;AREA_NAME;STATE_NAME
+1;SAL;AL;Alabama;Alabama
+2;SAK;AK;Alaska;Alaska
+3;SAR;AR;Arkansas;Arkansas
+4;SCA;CA;California;California
+5;RCAC;CA;California - Coastal Region Onshore;California
+6;RCAL;CA;California - Los Angeles Basin Onshore;California
+7;RCAJ;CA;California - San Joaquin Basin Onshore;California
+8;R5F;5F;California Federal Offshore;California
+9;RCASF;CA;California State Offshore;California
+10;SCO;CO;Colorado;Colorado
+11;SFL;FL;Florida;Florida
+12;R1901F;;Gulf of America Federal Offshore  (Central & Eastern);Gulf of America Federal Offshore
+13;R44F;;Gulf of America Federal Offshore  (Western);Gulf of America Federal Offshore
+14;SIL;IL;Illinois;Illinois
+15;SIN;IN;Indiana;Indiana
+16;SKS;KS;Kansas;Kansas
+17;SKY;KY;Kentucky;Kentucky
+18;SLA;LA;Louisiana;Louisiana
+19;RLAN;LA;Louisiana - North;Louisiana
+20;RLASO;LA;Louisiana - South Onshore;Louisiana
+21;RLASF;LA;Louisiana State Offshore;Louisiana
+22;R48;48;Lower 48 States;
+23;SMI;MI;Michigan;Michigan
+24;SMS;MS;Mississippi;Mississippi
+25;SMT;MT;Montana;Montana
+26;SNE;NE;Nebraska;Nebraska
+27;SNM;NM;New Mexico;New Mexico
+28;RNMEAST;NM;New Mexico - East;New Mexico
+29;RNMWEST;NM;New Mexico - West;New Mexico
+30;SND;ND;North Dakota;North Dakota
+31;SOH;OH;Ohio;Ohio
+32;SOK;OK;Oklahoma;Oklahoma
+33;SPA;PA;Pennsylvania;Pennsylvania
+34;STX;TX;Texas;Texas
+35;RTX01;TX;Texas - RRC District 1;Texas
+36;RTX10;TX;Texas - RRC District 10;Texas
+37;RTX02;TX;Texas - RRC District 2 Onshore;Texas
+38;RTX03;TX;Texas - RRC District 3 Onshore;Texas
+39;RTX04;TX;Texas - RRC District 4 Onshore;Texas
+40;RTX05;TX;Texas - RRC District 5;Texas
+41;RTX06;TX;Texas - RRC District 6;Texas
+42;RTX07B;TX;Texas - RRC District 7B;Texas
+43;RTX07C;TX;Texas - RRC District 7C;Texas
+44;RTX08;TX;Texas - RRC District 8;Texas
+45;RTX08A;TX;Texas - RRC District 8A;Texas
+46;RTX09;TX;Texas - RRC District 9;Texas
+47;RTXSF;TX;Texas State Offshore;Texas
+48;NUS;US;U.S.;United States
+49;RUSF;US;U.S. Federal Offshore;United States
+50;SUT;UT;Utah;Utah
+51;SWV;WV;West Virginia;West Virginia
+52;SWY;WY;Wyoming;Wyoming

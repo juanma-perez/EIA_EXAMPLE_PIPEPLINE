@@ -1,0 +1,12 @@
+ID;PROCESS;PROCESS_NAME
+1;R02;Reserves Adjustments
+2;R07A;Reserves Extensions and Discoveries
+3;R06;Reserves Acquisitions
+4;R03;Reserves Revision Increases
+5;R05;Reserves Sales
+6;R07;Reserves Extensions
+7;R09;Reserves New Reservoir Discoveries in Old Fields
+8;R08;Reserves New Field Discoveries
+9;R10;Production from Reserves
+10;R01;Proved Reserves
+11;R04;Reserves Revision Decreases

@@ -1,0 +1,55 @@
+name: eia_crude_reserves_production_pipeline
+
+env:
+  API_KEY: ${{ secrets.API_KEY }}
+  BASE_URL: 'https://api.eia.gov/v2/petroleum/crd/pres/data/'
+  START_YEAR: 2000
+  END_YEAR: null
+  FREQUENCY: 'annual'
+  LENGTH: 10000
+  FOLDER_DL: 'DL'
+  FILE_DL: 'crude_reserves_prod.csv'
+  FOLDER_DWH: 'DWH'
+  FILE_FACT: 'fact_crude_reserves_prod.csv'
+
+stages:
+  - stage: Install
+    steps:
+      - name: Install dependencies
+        run: |
+          pip install python-dotenv pyspark notebook nbconvert pandas requests
+
+  - stage: Extract_Load_to_Datalake
+    steps:
+      - name: Run Extraction Notebook - Download API data to DL
+        run: |
+          jupyter nbconvert --to notebook --execute load_eia_dl.ipynb --output executed_load_eia_dl.ipynb
+
+      - name: Validate Data Lake File
+        run: |
+          if [ ! -s "${{ env.FOLDER_DL }}/${{ env.FILE_DL }}" ]; then
+            echo "❌ Error: Data Lake output is empty or missing"
+            exit 1
+          else
+            echo "✅ Data Lake file ready: ${{ env.FOLDER_DL }}/${{ env.FILE_DL }}"
+          fi
+
+  - stage: Transform_Load_to_DWH
+    steps:
+      - name: Run Transformation Notebook - Load Data to Data Warehouse
+        run: |
+          jupyter nbconvert --to notebook --execute load_eia_dwh.ipynb --output executed_load_eia_dwh.ipynb
+
+      - name: Validate Data Warehouse File
+        run: |
+          if [ ! -s "${{ env.FOLDER_DWH }}/${{ env.FILE_FACT }}" ]; then
+            echo "❌ Error: Data Warehouse output is empty or missing"
+            exit 1
+          else
+            echo "✅ Data Warehouse file ready: ${{ env.FOLDER_DWH }}/${{ env.FILE_FACT }}"
+          fi
+
+  - stage: Done
+    steps:
+      - name: Pipeline completed
+        run: echo "✅ EIA Crude Oil Data Pipeline completed successfully!"
