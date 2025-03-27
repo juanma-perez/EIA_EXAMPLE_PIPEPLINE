@@ -38,3 +38,11 @@ FOLDER_DWH = "DWH"
 
 #Archvio con la data cruda 
 FILE_FACT = 'fact_crude_reserves_prod.csv'
+
+FILE_DIM_AREA = "dim_area.csv"
+
+FILE_DIM_PROCESS = "dim_process.csv"
+
+FILE_DIM_PRODUCT= "dim_product.csv"
+
+FILE_DIM_TIME="dim_time.csv"
